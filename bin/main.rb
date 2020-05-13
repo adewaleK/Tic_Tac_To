@@ -3,7 +3,7 @@
 puts 'Welcome to Tic Tac TOE'
 puts 'Please Read All Rules Carefully'
 puts 'To Acquire your box you have to select the number from 1 - 9'
-my_array = [[1, 2, 3], [4, 5, 6], [7, 8,9]]
+my_array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 my_array.each do |row|
   print row.join(' | ')
   puts
