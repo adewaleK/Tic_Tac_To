@@ -27,19 +27,15 @@ while game
   position = gets.chomp.to_i
   position -= 1
   if position >= 0 and position <= 9 and my_array[position] == '-'
-    if current_player == first_player
-      my_array[position] = "X"
-    else
-      my_array[position] = "O"
-    end
+    current_player == first_player ? my_array[position] = 'X' : my_array[position] = 'O' 
     # switch player
     if current_player == first_player
       current_player = second_player
     else
-    current_player = first_player
+      current_player = first_player
     end
   else
-    puts "Invalid move"
+    puts 'Invalid move'
   end
   puts "#{my_array[0]} | #{my_array[1]} | #{my_array[2]} "
   puts "#{my_array[3]} | #{my_array[4]} | #{my_array[5]} "
