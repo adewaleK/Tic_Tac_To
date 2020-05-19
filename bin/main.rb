@@ -32,12 +32,12 @@ while game
     # else
     #   my_array[position] = 'O'
     # end
-    my_array[position] = 
-    if current_player == first_player
-      'X' 
-    else
-      'O'
-    end
+    my_array[position] =
+      if current_player == first_player
+        'X'
+      else
+        'O'
+      end
     # switch player
     if current_player == first_player
       current_player = second_player
