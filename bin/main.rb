@@ -2,43 +2,47 @@
 
 puts 'Welcome to Tic Tac TOE'
 puts 'Please Read All Rules Carefully'
-puts 'To Acquire your box you have to select the number from 1 - 9'
 my_array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 my_array.each do |row|
   print row.join(' | ')
   puts
 end
 puts
-puts 'Please Enter First Player Name'
+puts 'First Player : Please Enter Your Name'
 first_player = gets.chomp
-puts 'Please Enter Second Player Name'
+puts 'Second Player : Please Enter Your Name'
 second_player = gets.chomp
 puts "#{first_player} has symbol X and #{second_player} has been assigned symbol O"
-my_array = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']]
-my_array.each do |row|
-  print row.join(' | ')
-  puts
-end
-puts 'Your game start Now'
+my_array = ['-', '-', '-',
+            '-', '-', '-',
+            '-', '-', '-']
+puts "#{my_array[0]} | #{my_array[1]} | #{my_array[2]} "
+puts "#{my_array[3]} | #{my_array[4]} | #{my_array[5]} "
+puts "#{my_array[6]} | #{my_array[7]} | #{my_array[8]} "
+current_player = first_player
 game = true
-while game == true
-puts "#{first_player}: Please Select your box (1-9)"
-first_player_box_selection = gets.chomp
-puts "#{second_player}: Please Select your box (1-9)"
-second_player_box_selection = gets.chomp
-if first_player_box_selection > 8 || first_player_box_selection < 0
-  puts "Invalid Move"
+while game
+  puts 'To Acquire your box you have to select the number from 1 - 9'
+puts "#{current_player} please select your box"
+position = gets.chomp.to_i
+position = position - 1
+if position >= 0 and position <=9 and my_array[position] == '-'
+ if current_player == first_player
+    my_array[position] = "X"
+  else
+    my_array[position] = "O"
+  end
+  # switch player
+  if current_player == first_player
+  current_player = second_player
+else
+  current_player = first_player
 end
-my_array = [['-', 'X', '-'], ['-', '-', '-'], ['-', '-', '-']]
-my_array.each do |row|
-  print row.join(' | ')
-  puts
+else
+  puts "Invalid move"
 end
-player_win = true
-game_draw = false
-if player_win == true
-  puts "Player win"
-else game_draw
-  puts "Game Draw"
+puts "#{my_array[0]} | #{my_array[1]} | #{my_array[2]} "
+puts "#{my_array[3]} | #{my_array[4]} | #{my_array[5]} "
+puts "#{my_array[6]} | #{my_array[7]} | #{my_array[8]} "
 end
-end
+
