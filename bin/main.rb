@@ -1,49 +1,29 @@
 #!/usr/bin/env ruby
+
 puts 'Welcome to Tic Tac TOE'
 puts 'Please Read All Rules Carefully'
 puts 'To Acquire your box you have to select the number from 1 - 9'
-puts 'Sample is given below'
-sample_array = [1,2,3,4,5,6,7,8,9]
-count = 0
-sample_array.each do |x|
-          print " #{x} "
-          count += 1
-            if count == 3
-              puts
-              count = 0
-            else
-              print "|"
-            end
-        end
-puts
-puts 'Your game Starts Now'
-puts
-empty_array = ['-', '-', '-', '-', '-', '-', '-', '-', '-']
-count = 0
-empty_array.each do |x|
-          print " #{x} "
-          count += 1
-            if count == 3
-              puts
-              count = 0
-            else
-              print "|"
-            end
-        end
-puts
-player_symbols = ["X", "O"]
-play_game = false
-while play_game == false
-print "Player #{player_turn}: Please Select your box (1-9): "
-box_selection = gets.chomp.to_i
-  puts "\n Please Select the right move \n"
+my_array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+my_array.each do |row|
+  print row.join(' | ')
+  puts
 end
 puts
-if game.win_status[0] == true
-  puts "Congratulations!!! Player with '#{game.win_status[1]}' Wins"
-  play_game = true
-elsif game.draw_status == true
-  puts "Game Draws"
-  play_game = true
+puts 'Please Enter First Player Name'
+first_player = gets.chomp
+puts 'Please Enter Second Player Name'
+second_player = gets.chomp
+puts "#{first_player} has symbol X and #{second_player} has been assigned symbol O"
+my_array = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']]
+my_array.each do |row|
+  print row.join(' | ')
+  puts
 end
-end
+puts 'Your game start Now'
+puts "#{first_player}: Please Select your box (1-9)"
+first_player_box_selection = gets.chomp
+puts "#{second_player}: Please Select your box (1-9)"
+second_player_box_selection = gets.chomp
+
+puts first_player_box_selection
+puts second_player_box_selection
