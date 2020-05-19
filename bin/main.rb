@@ -27,7 +27,11 @@ while game
   position = gets.chomp.to_i
   position -= 1
   if position >= 0 and position <= 9 and my_array[position] == '-'
-    current_player == first_player ? my_array[position] = 'X' : my_array[position] = 'O' 
+    case current_player
+    when first_player then my_array[position] = 'X'
+    else
+      my_array[position] = 'O'
+    end
     # switch player
     if current_player == first_player
       current_player = second_player
