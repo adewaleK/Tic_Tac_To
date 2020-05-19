@@ -20,10 +20,25 @@ my_array.each do |row|
   puts
 end
 puts 'Your game start Now'
+game = true
+while game == true
 puts "#{first_player}: Please Select your box (1-9)"
 first_player_box_selection = gets.chomp
 puts "#{second_player}: Please Select your box (1-9)"
 second_player_box_selection = gets.chomp
-
-puts first_player_box_selection
-puts second_player_box_selection
+if first_player_box_selection > 8 || first_player_box_selection < 0
+  puts "Invalid Move"
+end
+my_array = [['-', 'X', '-'], ['-', '-', '-'], ['-', '-', '-']]
+my_array.each do |row|
+  print row.join(' | ')
+  puts
+end
+player_win = true
+game_draw = false
+if player_win == true
+  puts "Player win"
+else game_draw
+  puts "Game Draw"
+end
+end
