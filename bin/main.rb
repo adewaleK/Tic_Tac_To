@@ -36,9 +36,9 @@ while game
     # switch player
     current_player =
       if current_player == first_player
-        current_player = second_player
+        second_player
       else
-        current_player = first_player
+        first_player
       end
   else
     puts 'Invalid move'
