@@ -1,24 +1,21 @@
 #!/usr/bin/env ruby
+require_relative ('../lib/board.rb')
 
 puts 'Welcome to Tic Tac TOE'
 puts 'Please Read All Rules Carefully'
-my_array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-my_array.each do |row|
-  print row.join(' | ')
-  puts
-end
+my_array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+board = Board.new
+board.display_board(my_array)
 puts
 puts 'First Player : Please Enter Your Name'
 first_player = gets.chomp
 puts 'Second Player : Please Enter Your Name'
 second_player = gets.chomp
 puts "#{first_player} has symbol X and #{second_player} has been assigned symbol O"
-my_array = ['-', '-', '-',
-            '-', '-', '-',
-            '-', '-', '-']
-puts "#{my_array[0]} | #{my_array[1]} | #{my_array[2]} "
-puts "#{my_array[3]} | #{my_array[4]} | #{my_array[5]} "
-puts "#{my_array[6]} | #{my_array[7]} | #{my_array[8]} "
+board = Board.new
+board.display_board
+puts
+board.display_board(my_array)
 current_player = first_player
 game = true
 while game
