@@ -25,20 +25,22 @@ while game
   puts 'To Acquire your box you have to select the number from 1 - 9'
   puts "#{current_player} please select your box"
   position = gets.chomp.to_i
-  position = position - 1
-  if position > 0 and position < 10 and my_array[position] == '-'
-    if current_player == first_player
-      my_array[position] = "X"
-    else
-      my_array[position] = "O"
-    end
-    if current_player == first_player
-      current_player = second_player
-    else
-      current_player = first_player
-    end
+  position -= 1
+  if position.positive? and position < 10 and my_array[position] == '-'
+    current_player =
+      if current_player == first_player
+        'X'
+      else
+        'O'
+      end
+    current_player =
+      if current_player == first_player
+        second_player
+      else
+        first_player
+      end
   else
-    puts "Invalid move"
+    puts 'Invalid move'
   end
   puts "#{my_array[0]} | #{my_array[1]} | #{my_array[2]} "
   puts "#{my_array[3]} | #{my_array[4]} | #{my_array[5]} "
