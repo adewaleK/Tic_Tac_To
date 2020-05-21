@@ -13,11 +13,13 @@ class TicTacToe
     @symbol = symbol
     return_array = [true]
     box -= 1
-    return false, 'Invalid Choice. Please Select 1 - 9 ' if box < 0 || box > 8
+    return false, 'Invalid Choice. Please Select 1 - 9 ' if box.negative? || box > 8
+
     return false, 'Invalid Move. Already Placed ' if @new_array[box] != '-'
-      @new_array[box] = @symbol
-      return_array[1] = @new_array
-      return return_array
+
+    @new_array[box] = @symbol
+    return_array[1] = @new_array
+    return_array
   end
 
   def draw_status
