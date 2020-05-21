@@ -11,20 +11,17 @@ class TicTacToe
 
   def check(symbol, box)
     @symbol = symbol
+    return_array = [true]
     box -= 1
-    if box < 0 || box  > 8
-      return false, 'Invalid Choice. Please Select 1 - 9 '
-    elsif @new_array[box] != '-'
-      return false, 'Invalid Move. Already Placed'
-    else
+    return false, 'Invalid Choice. Please Select 1 - 9 ' if box < 0 || box > 8
+    return false, 'Invalid Move. Already Placed ' if @new_array[box] != '-'
       @new_array[box] = @symbol
-    end
-
-    return true, @new_array
+      return_array[1] = @new_array
+      return return_array
   end
 
   def draw_status
-    return unless not @new_array.include? '-'
+    return true if !@new_array.include? '-'
   end
 
   def win_status
@@ -41,4 +38,5 @@ class TicTacToe
       end
     end
   end
+  
 end
