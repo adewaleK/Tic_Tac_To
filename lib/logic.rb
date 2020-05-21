@@ -21,7 +21,7 @@ class TicTacToe
   end
 
   def draw_status
-    return true if !@new_array.include? '-'
+    return true unless @new_array.include? '-'
   end
 
   def win_status
@@ -38,5 +38,5 @@ class TicTacToe
       end
     end
   end
-  
+
 end
