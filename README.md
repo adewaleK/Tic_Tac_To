@@ -4,7 +4,7 @@
 <p align="center">
   
 
-  <h3 align="center">Tic-Tac-Toe</h3>
+  # <h3 align="center">Tic-Tac-Toe</h3>
 
   <p align="center">
 
