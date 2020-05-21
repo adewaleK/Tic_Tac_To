@@ -26,8 +26,8 @@ while game
   puts "#{current_player} please select your box"
   position = gets.chomp.to_i
   position -= 1
-  if position.positive? and position < 10 and my_array[position] == '-'
-    current_player =
+  if position >= 0 and position <= 8 and my_array[position] == '-'
+    my_array[position] =
       if current_player == first_player
         'X'
       else
