@@ -32,13 +32,9 @@ class TicTacToe
       x.each do |y|
         if @new_array[y - 1] == @symbol
           count += 1
-          if count == 3
-            return true
-            count = 0
-          end
+          return true if count == 3
         end
       end
     end
   end
-
 end
