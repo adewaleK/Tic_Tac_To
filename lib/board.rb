@@ -4,12 +4,12 @@ class Board
   def initialize
     @new_array = ['-', '-', '-', '-', '-', '-', '-', '-', '-']
   end
-  
+
   def display_board(array_my = nil)
-    array_my.nil? ? display_array = @new_array : display_array = array_my
+    display_array = array_my.nil? ? @new_array : array_my
     count = 0
     display_array.each do |x|
-      print "#{x}"
+      print x
       count += 1
       if count == 3
         puts

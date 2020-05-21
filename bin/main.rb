@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require_relative ('../lib/board.rb')
-require_relative ('../lib/logic.rb')
+require_relative '../lib/board.rb'
+require_relative '../lib/logic.rb'
 
 puts 'Welcome to Tic Tac TOE'
 puts 'Please Read All Rules Carefully'
@@ -15,10 +15,10 @@ print 'Second Player : Please Enter Your Name: '
 second_player = gets.chomp
 puts "#{first_player} has symbol X and #{second_player} has been assigned symbol O"
 puts
-logic =Tic_Tac_Logic.new
+logic = TicTacToe.new
 my_array = []
-puts "Yous game starts Now"
-puts "Your Board is given below"
+puts 'Yous game starts Now'
+puts 'Your Board is given below'
 board.display_board
 puts
 current_player = first_player
@@ -28,29 +28,29 @@ while game
   print "#{current_player} please select your box: "
   position = gets.chomp.to_i
   symbol =
-      if current_player == first_player
-        'X'
-      else
-        'O'
-      end
-    game_check = logic.check(symbol, position)
-    if game_check[0]
-      board.display_board(game_check[1])
-      if logic.win_status == true
-        puts "#{current_player} Wins"
-        game = false
-      elsif logic.draw_status == true
-        puts "Game Draw. Try again!!!"
-        game = false
-      end
-      current_player =
-        if current_player == first_player
-          second_player
-        else
-          first_player
-        end
+    if current_player == first_player
+      'X'
     else
-      puts game_check[1]
+      'O'
     end
+  game_check = logic.check(symbol, position)
+  if game_check[0]
+    board.display_board(game_check[1])
+    if logic.win_status == true
+      puts "#{current_player} Wins"
+      game = false
+    elsif logic.draw_status == true
+      puts 'Game Draw. Try again!!!'
+      game = false
+    end
+    current_player =
+      if current_player == first_player
+        second_player
+      else
+        first_player
+      end
+  else
+    puts game_check[1]
+  end
   board.display_board(my_array)
 end
