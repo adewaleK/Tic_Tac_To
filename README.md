@@ -4,9 +4,6 @@
  
 <br> 
 
-</p>
-
-
 ## Table of Contents
 
 * [About the Project](#About-The-Project)
@@ -37,8 +34,6 @@ NOTE : Two players can't place their marks in the same square. Once a square is 
 
 4. When all 9 squares are filled without any of the players having their marks in a row, then the game is over and ended in a tie.
 
-<br>
-<br>
 
 ## How To Start The Game
 
