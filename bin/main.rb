@@ -50,13 +50,13 @@ while game
       else
         'O'
       end
-      if win_status(my_array, my_array[position]) == true
-        puts "#{current_player} wins!! "
-        game = false
-      elsif draw_status(my_array) == true
-        puts "Game Draw"
-        game = false
-      end
+    if win_status(my_array, my_array[position]) == true
+      puts "#{current_player} wins!! "
+      game = false
+    elsif draw_status(my_array) == true
+      puts 'Game Draw !!'
+      game = false
+    end
     current_player =
       if current_player == first_player
         second_player
