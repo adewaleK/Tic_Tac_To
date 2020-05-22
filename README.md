@@ -1,15 +1,7 @@
 # Tic_Tac_To
 
 <br />
-<p align="center">
-  
-
-  # <h3 align="center">Tic-Tac-Toe</h3>
-
-  <p align="center">
-
-<br>
-  
+ 
 <br> 
 
 </p>
@@ -17,11 +9,13 @@
 
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Getting Started](#getting-started)
+* [About the Project](#About-The-Project)
+* [Rules Of The Tic-Tac-To Game](#Rules-Of-The-Game)
+* [Getting Started With The Game](#How-To-Start-The-Game)
+* [Built With](#Built-With)
+* [Getting started](#Getting-Started)
 * [Contributing](#contributing)
-* [Contact](#contact)
+* [Authors](#Authors)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -29,7 +23,7 @@
 
 This project requires us to build a tic-tac-toe game on the command line where two human players can play against each other and the board is displayed in between turns. The game is to operate based on the same set of rules of the real life tic-tac-to game.
 
-## Rules Of The Tic-Tac-To Game
+## Rules Of The Game
 
 The game is really fun to play but consist of a set of simple rules to get started. The rules of the game are as highlighted in the steps below. Just follow rules step by step and you will see yourself become a master of the game in no time. 
 
@@ -76,7 +70,7 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin [Branch-name]`)
 5. Open a Pull Request
 
-## Author
+## Authors
 
 **Muhammad Fahad Umer** 
 * Github: [@githubhandle](https://github.com/MFahadUmer)
