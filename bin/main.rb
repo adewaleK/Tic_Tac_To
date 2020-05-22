@@ -1,5 +1,22 @@
 #!/usr/bin/env ruby
 
+def draw_status(new_array)
+  return true unless new_array.include? '-'
+end
+
+def win_status(new_array, symbol)
+  win_array = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]]
+  win_array.each do |x|
+    count = 0
+    x.each do |y|
+      if new_array[y - 1] == symbol
+        count += 1
+        return true if count == 3
+      end
+    end
+  end
+end
+
 puts 'Welcome to Tic Tac TOE'
 puts 'Please Read All Rules Carefully'
 my_array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -32,6 +49,13 @@ while game
         'X'
       else
         'O'
+      end
+      if win_status(my_array, my_array[position]) == true
+        puts "#{current_player} wins!! "
+        game = false
+      elsif draw_status(my_array) == true
+        puts "Game Draw"
+        game = false
       end
     current_player =
       if current_player == first_player
