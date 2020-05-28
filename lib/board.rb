@@ -8,17 +8,17 @@ class Board
   def display_board(array_my = nil)
     display_array = array_my.nil? ? @new_array : array_my
     count = 0
-    result = ""
+    result = ' '
     display_array.each do |x|
-      result += "#{x}"
+      result += " #{x} "
       count += 1
       if count == 3
-        result += "\n"
+        result += " \n "
         count = 0
       else
         result += ' | '
       end
     end
-    return result
+    result
   end
 end

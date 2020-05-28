@@ -11,10 +11,10 @@ puts board.display_board(sample_array)
 puts
 print 'First Player : Please Enter Your Name: '
 first_player = gets.chomp
-first_player = "PLayer : 1 " if first_player.empty?
+first_player = 'PLayer : 1 ' if first_player.empty?
 print 'Second Player : Please Enter Your Name: '
 second_player = gets.chomp
-second_player = "PLayer : 2 " if second_player.empty?
+second_player = 'PLayer : 2 ' if second_player.empty?
 puts "#{first_player} has symbol X and #{second_player} has been assigned symbol O"
 puts
 logic = TicTacToe.new
