@@ -1,7 +1,7 @@
 class TicTacToe
-  attr_accessor :new_array
+  attr_reader :new_array
   attr_reader :win_array
-  attr_accessor :win_variable
+  attr_reader :win_variable
 
   def initialize
     @win_variable = win_variable

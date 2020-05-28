@@ -7,19 +7,21 @@ puts 'Please Read All Rules Carefully'
 puts 'You have to select the number for your desire box as the sample is given below'
 board = Board.new
 sample_array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-board.display_board(sample_array)
+puts board.display_board(sample_array)
 puts
 print 'First Player : Please Enter Your Name: '
 first_player = gets.chomp
+first_player = "PLayer : 1 " if first_player.empty?
 print 'Second Player : Please Enter Your Name: '
 second_player = gets.chomp
+second_player = "PLayer : 2 " if second_player.empty?
 puts "#{first_player} has symbol X and #{second_player} has been assigned symbol O"
 puts
 logic = TicTacToe.new
 my_array = []
 puts 'Yous game starts Now'
 puts 'Your Board is given below'
-board.display_board
+puts board.display_board
 puts
 current_player = first_player
 game = true
@@ -35,7 +37,7 @@ while game
     end
   game_check = logic.check(symbol, position)
   if game_check[0]
-    board.display_board(game_check[1])
+    puts board.display_board(game_check[1])
     if logic.win_status == true
       puts "#{current_player} Wins"
       game = false
@@ -52,5 +54,5 @@ while game
   else
     puts game_check[1]
   end
-  board.display_board(my_array)
+  puts board.display_board(my_array)
 end
